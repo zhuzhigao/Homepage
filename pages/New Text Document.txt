@@ -1,0 +1,44 @@
+	<div>
+		<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+			<div data-thumb="./images/slides/thumbs/bridge.jpg" data-src="./images/slides/bridge.jpg">
+				<div class="camera_caption fadeFromBottom">
+					See how cool the family is!
+				</div>
+			</div>
+			<div data-thumb="./images/slides/thumbs/leaf.jpg" data-src="./images/slides/leaf.jpg">
+				<div class="camera_caption fadeFromBottom">
+					See how cool the family is!
+				</div>
+			</div>
+			<div data-thumb="./images/slides/thumbs/road.jpg" data-src="./images/slides/road.jpg">
+				<div class="camera_caption fadeFromBottom">
+					See how cool the family is!
+				</div>
+			</div>
+			<div data-thumb="./images/slides/thumbs/sea.jpg" data-src="./images/slides/sea.jpg">
+				<div class="camera_caption fadeFromBottom">
+					See how cool the family is!
+				</div>
+			</div>
+			<div data-thumb="./images/slides/thumbs/shelter.jpg" data-src="./images/slides/shelter.jpg">
+				<div class="camera_caption fadeFromBottom">
+					See how cool the family is!
+				</div>
+			</div>
+			<div data-thumb="./images/slides/thumbs/tree.jpg" data-src="./images/slides/tree.jpg">
+				<div class="camera_caption fadeFromBottom">
+					See how cool the family is!
+				</div>
+			</div>
+		</div><!-- #camera_wrap_1 -->
+
+	</div>
+	<script>
+		jQuery(function () {
+			jQuery('#camera_wrap_1').camera({
+				time: 1000,
+				transPeriod: 1000,
+				height: '500px',
+			});
+		});
+	</script>
