@@ -1,4 +1,24 @@
-<div id="baidumap" style="width: 80%;height: 600px; margin: 0 auto;">
-	
+<div id="baidumap" style="height: 600px; overflow: hidden;margin-bottom:20px;">
 </div>
 
+<div class="row">
+	<div class="col-md-8" >
+	<div style="border-radius: 20px/20px;background: #A8DC3C; height: 500px;" > 
+		<div class="camera_wrap camera_azure_skin" id="footprintcamera" camslider  style="margin-top:20px;">
+			<div ng-repeat="img in imagesource" data-thumb="{{img.datathumb}}" data-src="{{img.datasrc}}">
+				<div class="camera_caption fadefrombottom">
+					see how cool the family is!
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="col-md-4" >
+		<div style="border-radius: 20px/20px;background: #B9D998; height: 500px;" > 
+			<p style="padding: 20px">
+				The story at this place.
+			</p>
+			
+		</div>
+	</div>
+</div>

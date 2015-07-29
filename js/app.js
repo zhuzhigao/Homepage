@@ -55,13 +55,18 @@ app.controller('homeCtrl', function($scope) {
 
 app.controller('footprintCtrl', function($scope) {
 	$scope.templateUrl = "./pages/footprint.html";
+
+	$scope.imagesource = [
+				{"datathumb": "./images/slides/thumbs/bridge.jpg", "datasrc": "./images/slides/bridge.jpg"}, 
+				{"datathumb": "./images/slides/thumbs/leaf.jpg", "datasrc": "./images/slides/leaf.jpg"}, 
+				{"datathumb": "./images/slides/thumbs/tree.jpg", "datasrc": "./images/slides/tree.jpg"}		];
 	
 	//this must be called to enable the slider. 
 	//the time delay is necessary to make sure the element is in place. 
 	$scope.onsliderload = function() {
 		setTimeout(function(){
 			var map = new BMap.Map("baidumap");  
-			map.centerAndZoom(new BMap.Point(0, 20), 1);
+			map.centerAndZoom(new BMap.Point(8, 20), 4);
 			map.addControl(new BMap.MapTypeControl());
 			map.setCurrentCity("北京");          
 			map.enableScrollWheelZoom(true);
@@ -81,6 +86,14 @@ app.controller('footprintCtrl', function($scope) {
 				map.addOverlay(marker);              
 			};
 
+		}, 50);
+
+		setTimeout(function(){
+			jQuery('#footprintcamera').camera({
+		 			time: 1000,
+		 			transPeriod: 1000,
+		 			height: '430px',
+		 		});
 		}, 50);
 	}
 });
