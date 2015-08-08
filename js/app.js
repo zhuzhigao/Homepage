@@ -24,12 +24,12 @@ app.config(['$routeProvider',
 
 app.controller('homeCtrl', function($scope) {
 	$scope.imagesource = [
-	{"datathumb": "./images/slides/thumbs/bridge.jpg", "datasrc": "./images/slides/bridge.jpg"}, 
-	{"datathumb": "./images/slides/thumbs/leaf.jpg", "datasrc": "./images/slides/leaf.jpg"}, 
-	{"datathumb": "./images/slides/thumbs/road.jpg", "datasrc": "./images/slides/road.jpg"}, 
-	{"datathumb": "./images/slides/thumbs/sea.jpg", "datasrc": "./images/slides/sea.jpg"}, 
-	{"datathumb": "./images/slides/thumbs/shelter.jpg", "datasrc": "./images/slides/shelter.jpg"}, 
-	{"datathumb": "./images/slides/thumbs/tree.jpg", "datasrc": "./images/slides/tree.jpg"}		];
+	{"datathumb": "./images/slides/thumbs/1.png", "datasrc": "./images/slides/1.png"}, 
+	{"datathumb": "./images/slides/thumbs/2.png", "datasrc": "./images/slides/2.png"}, 
+	{"datathumb": "./images/slides/thumbs/3.png", "datasrc": "./images/slides/3.png"}, 
+	{"datathumb": "./images/slides/thumbs/4.png", "datasrc": "./images/slides/4.png"}, 
+	{"datathumb": "./images/slides/thumbs/5.png", "datasrc": "./images/slides/5.png"}, 
+	{"datathumb": "./images/slides/thumbs/6.png", "datasrc": "./images/slides/6.png"}		];
 	
 	$scope.templateUrl = "./pages/intro.html";
 	
@@ -40,7 +40,7 @@ app.controller('homeCtrl', function($scope) {
 			jQuery('#camera_wrap_1').camera({
 				time: 1000,
 				transPeriod: 1000,
-				height: '500px',
+				height: '640px',
 			});
 		}, 50);
 	}
@@ -60,9 +60,9 @@ app.controller('footprintCtrl', function($scope) {
 	$scope.templateUrl = "./pages/footprint.html";
 
 	$scope.imagesource = [
-	{"datathumb": "./images/slides/thumbs/bridge.jpg", "datasrc": "./images/slides/bridge.jpg"}, 
-	{"datathumb": "./images/slides/thumbs/leaf.jpg", "datasrc": "./images/slides/leaf.jpg"}, 
-	{"datathumb": "./images/slides/thumbs/tree.jpg", "datasrc": "./images/slides/tree.jpg"}		];
+	{"datathumb": "./images/slides/thumbs/1.png", "datasrc": "./images/slides/1.png"}, 
+	{"datathumb": "./images/slides/thumbs/2.png", "datasrc": "./images/slides/2.png"}, 
+	{"datathumb": "./images/slides/thumbs/3.png", "datasrc": "./images/slides/3.png"}		];
 	
 	//this must be called to enable the slider. 
 	//the time delay is necessary to make sure the element is in place. 
