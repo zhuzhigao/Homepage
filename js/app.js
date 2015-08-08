@@ -2,16 +2,15 @@ var app = angular.module('homeApp', ['ngRoute']);
 app.config(['$routeProvider',
 	function($routeProvider) {
 		$routeProvider.
-		when('/life', {
-			templateUrl: './pages/life.html',
-			controller: 'homeCtrl'
+		when('/stories', {
+			templateUrl: './pages/stories.html',
+			controller: 'stroriesCtrl'
 		}).
-		when('/about', {
-			templateUrl: './pages/about.html',
-        	controller: 'aboutCtrl'
+		when('/familytree', {
+			templateUrl: './pages/familytree.html',
+        	controller: 'familyCtrl'
 		}).
 		when('/footprint', {
-        // templateUrl: './pages/footprint.html',
         template: '<div ng-include src="templateUrl" onload="onsliderload()"></div>',
         controller: 'footprintCtrl'
    		}).
@@ -102,14 +101,28 @@ app.controller('footprintCtrl', function($scope) {
 	}
 });
 
-app.controller("aboutCtrl", function ($scope, $timeout){
+app.controller("stroriesCtrl", function ($scope, $timeout){
 })
 .directive('timeline', function($timeout) {
 	return {link: 
 		function(scope, el, attrs) {
 			$timeout((function(){
 				$('.cntl').cntl();
-				console.log("initialized");
+			}), 50);
+		}
+	}
+});
+
+app.controller("familyCtrl", function ($scope, $timeout){
+})
+.directive('maphighlight', function($timeout) {
+	return {link: 
+		function(scope, el, attrs) {
+			$timeout((function(){
+				$('.familytree').maphilight();
+				$("#familymember area").click( function () {
+        			alert($(this).attr('id')); // this
+    			});
 			}), 50);
 		}
 	}
