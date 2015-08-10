@@ -69,7 +69,7 @@ app.controller('footprintCtrl', function($scope) {
 	$scope.onsliderload = function() {
 		setTimeout(function(){
 			var map = new BMap.Map("baidumap");  
-			map.centerAndZoom(new BMap.Point(8, 20), 4);
+			map.centerAndZoom(new BMap.Point(8, 20), 3);
 			map.addControl(new BMap.MapTypeControl());
 			map.setCurrentCity("北京");          
 			map.enableScrollWheelZoom(true);
@@ -114,15 +114,22 @@ app.controller("stroriesCtrl", function ($scope, $timeout){
 });
 
 app.controller("familyCtrl", function ($scope, $timeout){
+	$scope.persons = [
+		{"name": "zhigao", "shape": "rect", "coords": "0, 0, 200, 200"},
+		{"name": "aiqin", "shape": "rect", "coords": "200, 200, 400, 400"},
+	];
+
+	$scope.personintro = "person information";
+
+	$scope.personclick = function (person) {
+        				$scope.personintro = person.name;
+    				}
 })
 .directive('maphighlight', function($timeout) {
 	return {link: 
-		function(scope, el, attrs) {
+		function($scope, el, attrs) {
 			$timeout((function(){
 				$('.familytree').maphilight();
-				$("#familymember area").click( function () {
-        			alert($(this).attr('id')); // this
-    			});
 			}), 50);
 		}
 	}
