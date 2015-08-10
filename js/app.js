@@ -62,7 +62,9 @@ app.controller('footprintCtrl', function($scope) {
 	$scope.imagesource = [
 	{"datathumb": "./images/slides/thumbs/1.png", "datasrc": "./images/slides/1.png"}, 
 	{"datathumb": "./images/slides/thumbs/2.png", "datasrc": "./images/slides/2.png"}, 
-	{"datathumb": "./images/slides/thumbs/3.png", "datasrc": "./images/slides/3.png"}		];
+	{"datathumb": "./images/slides/thumbs/3.png", "datasrc": "./images/slides/3.png"}];
+
+	$scope.description = "location";
 	
 	//this must be called to enable the slider. 
 	//the time delay is necessary to make sure the element is in place. 
@@ -85,7 +87,8 @@ app.controller('footprintCtrl', function($scope) {
 				{x: 3.88, y: 43.6}, //monpelier
 				];
 				for (var i = points.length - 1; i >= 0; i--) {
-					var marker = new BMap.Marker(new BMap.Point(points[i].x, points[i].y));  
+					var marker = new BMap.Marker(new BMap.Point(points[i].x, points[i].y));
+					marker.addEventListener("click",$scope.markerclicked);
 					map.addOverlay(marker);              
 				};
 
@@ -98,7 +101,14 @@ app.controller('footprintCtrl', function($scope) {
 				height: '430px',
 			});
 		}, 50);
-	}
+	};
+
+	$scope.markerclicked = function(e){
+		var marker = e.target;
+		$scope.description = marker.getPosition().lng + "," + marker.getPosition().lat;
+		$scope.$digest();
+	};
+
 });
 
 app.controller("stroriesCtrl", function ($scope, $timeout){
