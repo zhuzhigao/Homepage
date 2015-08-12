@@ -1,4 +1,4 @@
-var app = angular.module('homeApp', ['ngRoute']);
+var app = angular.module('homeApp', ['ngRoute', 'ngSanitize']);
 app.config(['$routeProvider',
 	function($routeProvider) {
 		$routeProvider.
@@ -59,23 +59,20 @@ app.controller('homeCtrl', function($scope) {
 app.controller('footprintCtrl', function($scope) {
 	$scope.templateUrl = "./pages/footprint.html";
 
-	$scope.imagesource = [
-	{"datathumb": "./images/bali/1.png", "datasrc": "./images/bali/1.png"}, 
-	{"datathumb": "./images/bali/2.png", "datasrc": "./images/bali/2.png"}, 
-	{"datathumb": "./images/bali/3.png", "datasrc": "./images/bali/3.png"}];
-
 	$scope.placevisited=[
 	{	location: "Lankawei", 
 	coords:{x: 99.67, y: 6.35}, 
-	images:["./images/lankawi/1.png", "./images/lankawi/2.png", "./images/lankawi/3.png", "./images/lankawi/4.png", "./images/lankawi/5.png"]
+	images:["./images/lankawi/1.png", "./images/lankawi/2.png", "./images/lankawi/3.png", "./images/lankawi/4.png", "./images/lankawi/5.png"],
+	description: "<p>We had a 8 days trip to Lankawei Island in Oct, 2013. Dou Dou was around 5 years old at that time.</p> <p>I clearly remember that DouDou called the shuttle bus with his lovely voice: shuttle please, and several days later even the reception knew him and would like to play with him.</p> <p>We rent a car during this trip, no surprise, a small accident.:-)</p> <p>We also visited K.L for two days. In the twin tower, we even caught a fire drill.</p>"
 	},
 	{	location: "Bali", 
 	coords:{x: 115.22, y: -8.8}, 
-	images:["./images/bali/1.png", "./images/bali/2.png", "./images/bali/3.png", "./images/bali/4.png", "./images/bali/5.png"]
+	images:["./images/bali/1.png", "./images/bali/2.png", "./images/bali/3.png", "./images/bali/4.png", "./images/bali/5.png"],
+	description: "bali, innonesia, Apr 2012. First family trip in south east asia."
 	},
-	]
+	];
 
-$scope.description = "location";
+	$scope.activePlace = $scope.placevisited[0];
 
 	//this must be called to enable the slider. 
 	//the time delay is necessary to make sure the element is in place. 
@@ -104,39 +101,37 @@ $scope.description = "location";
 				map.addOverlay(marker);              
 			};
 		}, 50);
-		setTimeout(function(){
-			jQuery('#footprintcamera').camera({
-				time: 1000,
-				transPeriod: 1000,
-				height: '430px',
-			});
-		}, 50);
+		$scope.updatecamera();
 	};
 
 	$scope.markerclicked = function(e){
 		$(".camera_wrap").cameraStop();
 		var marker = e.target;
 		$scope.description = marker.location;
-		var place = $.grep($scope.placevisited, function(e){ return e.location == marker.location; })[0];
-		$scope.imagesource =[];
-		$.each(place.images, function(idx, val){
-			var img = {"datathumb": val, "datasrc": val};
-			$scope.imagesource.push(img);
-		});
+		$scope.activePlace = $.grep($scope.placevisited, function(e){ return e.location == marker.location; })[0];
 
 		$scope.$apply();
+
+		$scope.updatecamera();
 		
-		jQuery('#footprintcamera').camera({
-		 		slides:$scope.imagesource
-		 	});
 	};
 
-	$scope.updatecamera()
-	{
+	$scope.updatecamera=function(){
 		$(".camera_wrap").empty();
-		$(".camera_wrap").append("<p>Test</p>");
-	}
+		$.each($scope.activePlace.images, function (idx, val){
+			var slide = "<div data-thumb=\"" + val + "\"" + "data-src=\"" + val +"\">";
+			slide = slide +  "<div class=\"camera_caption fadefrombottom\">";
+			slide = slide + "see how cool the family is!";
+			slide = slide + "</div>"
+			$(".camera_wrap").append(slide);
+		});
 
+		$('#footprintcamera').camera({
+			time: 1000,
+			transPeriod: 1000,
+			height: '430px',
+		});
+	}
 });
 
 app.controller("stroriesCtrl", function ($scope, $timeout){

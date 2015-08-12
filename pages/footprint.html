@@ -15,9 +15,10 @@
 	</div>
 	<div class="col-md-4" >
 		<div style="border-radius: 20px/20px;background: #B9D998; height: 500px;" > 
-			<p style="padding: 20px">
-				{{description}}
-			</p>
+			<h2 style="padding: 20px">{{activePlace.location}}</h2>
+
+			<div style="padding-left: 20px; padding-right: 20px" ng-bind-html="activePlace.description">
+			</div>
 			
 		</div>
 	</div>
