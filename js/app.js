@@ -70,6 +70,16 @@ app.controller('footprintCtrl', function($scope) {
 	images:["./images/bali/1.png", "./images/bali/2.png", "./images/bali/3.png", "./images/bali/4.png", "./images/bali/5.png"],
 	description: "bali, innonesia, Apr 2012. First family trip in south east asia."
 	},
+	{	location: "Bashang", 
+	coords:{x: 116, y: 41.58}, 
+	images:["./images/bashang/1.png", "./images/bashang/2.png", "./images/bashang/3.png", "./images/bashang/4.png", "./images/bashang/5.png"],
+	description: "bashang grassland"
+	},
+	{	location: "HongKong", 
+	coords:{x: 114.16, y: 22.3}, 
+	images:["./images/hongkong/1.png", "./images/hongkong/2.png", "./images/hongkong/3.png", "./images/hongkong/4.png", "./images/hongkong/5.png"],
+	description: "Hongkong trip"
+	},
 	];
 
 	$scope.activePlace = $scope.placevisited[0];
@@ -93,6 +103,8 @@ app.controller('footprintCtrl', function($scope) {
 			// 	{x: 110.48, y: 29.12},//zhangjiajie
 			// 	{x: 126.55, y: 45.6},//haerbin
 			// 	{x: 3.88, y: 43.6}, //monpelier
+			//		{x: 116.0, y:  41.58}, //bashang 
+			//		{x:114.16 , y:22.3 }, //hongkong
 			// 	];
 			for (var i = $scope.placevisited.length - 1; i >= 0; i--) {
 				var marker = new BMap.Marker(new BMap.Point($scope.placevisited[i].coords.x, $scope.placevisited[i].coords.y));
