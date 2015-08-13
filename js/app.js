@@ -160,8 +160,20 @@ app.controller("stroriesCtrl", function ($scope, $timeout){
 
 app.controller("familyCtrl", function ($scope, $timeout){
 	$scope.persons = [
-	{"name": "zhigao", "shape": "rect", "coords": "0, 0, 200, 200"},
-	{"name": "aiqin", "shape": "rect", "coords": "200, 200, 400, 400"},
+	{"name": "zhigao's father", "shape": "rect", "coords": "209, 59, 309, 166"},
+	{"name": "zhigao's mother", "shape": "rect", "coords": "360, 59, 460, 166"},
+	{"name": "aiqin's father", "shape": "rect", "coords": "514, 59, 614, 166"},
+	{"name": "aiqin's mother", "shape": "rect", "coords": "666, 59, 766, 166"},
+	{"name": "zhigao's brother in law", "shape": "rect", "coords": "53, 214, 158, 328"},
+	{"name": "zhigao's sister", "shape": "rect", "coords": "205, 214, 312, 328"},
+	{"name": "zhigao", "shape": "rect", "coords": "357, 214, 463, 328"},
+	{"name": "aiqin", "shape": "rect", "coords": "511, 214, 617, 328"},
+	{"name": "aiqin's sister", "shape": "rect", "coords": "663, 214, 769, 328"},
+	{"name": "aiqin's brother in law", "shape": "rect", "coords": "815, 214, 920, 328"},
+	{"name": "zhigao's nephew", "shape": "rect", "coords": "131, 364, 231, 473"},
+	{"name": "doudou", "shape": "rect", "coords": "437, 365, 536, 473"},
+	{"name": "aiqin's nephew", "shape": "rect", "coords": "743, 364, 843, 473"},
+
 	];
 
 	$scope.personintro = "person information";
