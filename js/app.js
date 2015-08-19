@@ -40,7 +40,7 @@ app.controller('homeCtrl', function($scope) {
 			jQuery('#camera_wrap_1').camera({
 				time: 1000,
 				transPeriod: 1000,
-				height: '640px',
+				height: '650px',
 			});
 		}, 50);
 	}
@@ -176,7 +176,7 @@ app.controller("familyCtrl", function ($scope, $timeout){
 
 	];
 
-	$scope.personintro = "person information";
+	$scope.personintro = "This family tree shows where we're from. Click the picture of each person to know more about him/her. ";
 
 	$scope.personclick = function (person) {
 		$scope.personintro = person.name;
