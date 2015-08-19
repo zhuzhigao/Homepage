@@ -178,8 +178,9 @@ app.controller("familyCtrl", function ($scope, $timeout){
 
 	$scope.personintro = "This family tree shows where we're from. Click the picture of each person to know more about him/her. ";
 
-	$scope.personclick = function (person) {
+	$scope.personclick = function (person, $event) {
 		$scope.personintro = person.name;
+		$event.stopPropagation();
 	}
 })
 .directive('maphighlight', function($timeout) {
