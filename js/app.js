@@ -63,22 +63,32 @@ app.controller('footprintCtrl', function($scope) {
 	{	location: "Lankawei", 
 	coords:{x: 99.67, y: 6.35}, 
 	images:["./images/lankawi/1.png", "./images/lankawi/2.png", "./images/lankawi/3.png", "./images/lankawi/4.png", "./images/lankawi/5.png"],
-	description: "<p>We had a 8 days trip to Lankawei Island in Oct, 2013. Dou Dou was around 5 years old at that time.</p> <p>I clearly remember that DouDou called the shuttle bus with his lovely voice: shuttle please, and several days later even the reception knew him and would like to play with him.</p> <p>We rent a car during this trip, no surprise, a small accident.:-)</p> <p>We also visited K.L for two days. In the twin tower, we even caught a fire drill.</p>"
+	description: "<p>8 days trip to Lankawei Island in Oct, 2013. Dou Dou was around 5 years old at that time.</p> <p>I clearly remember that DouDou called the shuttle bus with his lovely voice: shuttle please, and several days later even the reception knew him and would like to play with him.</p> <p>We rent a car during this trip, no surprise, a small accident.:-)</p> <p>We also visited K.L for two days. In the twin tower, we even caught a fire drill.</p>"
 	},
 	{	location: "Bali", 
 	coords:{x: 115.22, y: -8.8}, 
 	images:["./images/bali/1.png", "./images/bali/2.png", "./images/bali/3.png", "./images/bali/4.png", "./images/bali/5.png"],
-	description: "bali, innonesia, Apr 2012. First family trip in south east asia."
+	description: "<p>8 days trip to Bali Island in Apr, 2012. Doudou's first international trip.</p> <p>We really enjoyed the sunshine and breach there. Especially in Nusa Dua, just spent the time on beach and in swimming pool, beautiful leasure time. Doudou was so scared the first time he entered the swimming pool, but later just couldn't stop him.</p> <p>The Fa Lun Gong there was also very impressive - they even have a band. -__-!!</p>"
 	},
 	{	location: "Bashang", 
 	coords:{x: 116, y: 41.58}, 
 	images:["./images/bashang/1.png", "./images/bashang/2.png", "./images/bashang/3.png", "./images/bashang/4.png", "./images/bashang/5.png"],
-	description: "bashang grassland"
+	description: "<p>The trip to prairie in 2013, with high expectation and high dispointment.</p><p>The thing impressed me was not the grass, not the horse, not the broadness land, but the time spent on the way - 7 hours driving from Beijing to there, and 8 hours driving back. I did want to replace the car with a more powerful one - it was so slow after fully loaded..</p>"
 	},
 	{	location: "HongKong", 
 	coords:{x: 114.16, y: 22.3}, 
 	images:["./images/hongkong/1.png", "./images/hongkong/2.png", "./images/hongkong/3.png", "./images/hongkong/4.png", "./images/hongkong/5.png"],
-	description: "Hongkong trip"
+	description: "<p>4 days trip in Hongkong in 2014.</p> <p>The city is not as good as I imgined. Small and crowded. But the Disney Land was great, even there were so many people. Deeply impressed by the musical opera, the playground was also outstanding. We waited till 8:30PM for the fireworks, but it turned out to be another highlight.</p></p>The Sea World was also attractive, but seemed not to Dou Dou. Diamond cable car was another must-try thing, if you're not scared of the height.<p>"
+	},
+	{	location: "Jiuzaigou", 
+	coords:{x: 104.2, y: 33.3}, 
+	images:["./images/jiuzai/1.png", "./images/jiuzai/2.png", "./images/jiuzai/3.png", "./images/jiuzai/4.png", "./images/jiuzai/5.png"],
+	description: "<p>Jiuzaigou trip in year 2006, the first long distance trip after marriage.</p><p>After two days in Chengdu, we took 10 hours bus to Jiu Zai Tou. Pretty dangerious and tough trip, but it deserved - we saw a lot of autumn scenes on the way .</p> <p>End of september is really the best season, the red trees mirrored in the amazing water make it like a heaven.</p><p>In Huanglong, we caught the first snow of that year - from autumn to winter in just one night.</p>"
+	},
+	{	location: "Taishan", 
+	coords:{x: 117.1, y: 37.25}, 
+	images:["./images/taishan/1.png", "./images/taishan/2.png", "./images/taishan/3.png", "./images/taishan/4.png", "./images/taishan/5.png"],
+	description: "<p>Taishan trip around 2003. A classic place of must be there once, but never the second time.</p> <p>Pretty tired climbing - yes, we'd like to save the money for cable car:-). We didn't see great views on the way, neither caught the sun rise. To people who are not interested in culture very much like us, it was a boring trip.</p>"
 	},
 	];
 
@@ -160,20 +170,45 @@ app.controller("stroriesCtrl", function ($scope, $timeout){
 
 app.controller("familyCtrl", function ($scope, $timeout){
 	$scope.persons = [
-	{"name": "zhigao's father", "shape": "rect", "coords": "209, 59, 309, 166"},
-	{"name": "zhigao's mother", "shape": "rect", "coords": "360, 59, 460, 166"},
-	{"name": "aiqin's father", "shape": "rect", "coords": "514, 59, 614, 166"},
-	{"name": "aiqin's mother", "shape": "rect", "coords": "666, 59, 766, 166"},
-	{"name": "zhigao's brother in law", "shape": "rect", "coords": "53, 214, 158, 328"},
-	{"name": "zhigao's sister", "shape": "rect", "coords": "205, 214, 312, 328"},
-	{"name": "zhigao", "shape": "rect", "coords": "357, 214, 463, 328"},
-	{"name": "aiqin", "shape": "rect", "coords": "511, 214, 617, 328"},
-	{"name": "aiqin's sister", "shape": "rect", "coords": "663, 214, 769, 328"},
-	{"name": "aiqin's brother in law", "shape": "rect", "coords": "815, 214, 920, 328"},
-	{"name": "zhigao's nephew", "shape": "rect", "coords": "131, 364, 231, 473"},
-	{"name": "doudou", "shape": "rect", "coords": "437, 365, 536, 473"},
-	{"name": "aiqin's nephew", "shape": "rect", "coords": "743, 364, 843, 473"},
-
+	{"name": "Zhigao's father, smart and hard work, raised the family with his small body.", 
+	"shape": "rect", 
+	"coords": "209, 59, 309, 166"},
+	{"name": "Zhigao's mother, almost illiterate, very smart in learning everything, yet a little sensitive.", 
+	"shape": "rect", 
+	"coords": "360, 59, 460, 166"},
+	{"name": "Aiqin's father, former tractor driver, very silent and reliable person.", 
+	"shape": "rect", 
+	"coords": "514, 59, 614, 166"},
+	{"name": "Aiqin's mother, almost illiterate but is strong minded and hard working.", 
+	"shape": "rect", 
+	"coords": "666, 59, 766, 166"},
+	{"name": "Zhigao's brother in law, professional driver and nice guy.", 
+	"shape": "rect", 
+	"coords": "53, 214, 158, 328"},
+	{"name": "Zhigao's sister, an ordinary worker at the hometown, very kind-hearted, live close to the parents.",
+	"shape": "rect",
+	"coords": "205, 214, 312, 328"},
+	{"name": "Zhigao, the host.",
+	"shape": "rect",
+	"coords": "357, 214, 463, 328"},
+	{"name": "Aiqin, the hostress.",
+	"shape": "rect",
+	"coords": "511, 214, 617, 328"},
+	{"name": "Aiqin's sister, a doctor at her hometown, live close to the parents.",
+	"shape": "rect",
+	"coords": "663, 214, 769, 328"},
+	{"name": "Aiqin's brother in law, registered accountant at the hometown.",
+	"shape": "rect",
+	"coords": "815, 214, 920, 328"},
+	{"name": "Zhigao's nephew, will have the university entrance exam next year - fully believe he is going to join a great university.",
+	"shape": "rect",
+	"coords": "131, 364, 231, 473"},
+	{"name": "Doudou, my lovely son, going to be grade 2 primary school student.",
+	"shape": "rect",
+	"coords": "437, 365, 536, 473"},
+	{"name": "aiqin's nephew, going to be grade 5 primary school student, good at Chinese Calligraphy.",
+	"shape": "rect",
+	"coords": "743, 364, 843, 473"},
 	];
 
 	$scope.personintro = "This family tree shows where we're from. Click the picture of each person to know more about him/her. ";
