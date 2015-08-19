@@ -24,12 +24,12 @@ app.config(['$routeProvider',
 
 app.controller('homeCtrl', function($scope) {
 	$scope.imagesource = [
-	{"datathumb": "./images/slides/thumbs/1.png", "datasrc": "./images/slides/1.png"}, 
-	{"datathumb": "./images/slides/thumbs/2.png", "datasrc": "./images/slides/2.png"}, 
-	{"datathumb": "./images/slides/thumbs/3.png", "datasrc": "./images/slides/3.png"}, 
-	{"datathumb": "./images/slides/thumbs/4.png", "datasrc": "./images/slides/4.png"}, 
-	{"datathumb": "./images/slides/thumbs/5.png", "datasrc": "./images/slides/5.png"}, 
-	{"datathumb": "./images/slides/thumbs/6.png", "datasrc": "./images/slides/6.png"}		];
+	{"datathumb": "./images/slides/thumbs/1.jpg", "datasrc": "./images/slides/1.jpg"}, 
+	{"datathumb": "./images/slides/thumbs/2.jpg", "datasrc": "./images/slides/2.jpg"}, 
+	{"datathumb": "./images/slides/thumbs/3.jpg", "datasrc": "./images/slides/3.jpg"}, 
+	{"datathumb": "./images/slides/thumbs/4.jpg", "datasrc": "./images/slides/4.jpg"}, 
+	{"datathumb": "./images/slides/thumbs/5.jpg", "datasrc": "./images/slides/5.jpg"}, 
+	{"datathumb": "./images/slides/thumbs/6.jpg", "datasrc": "./images/slides/6.jpg"}		];
 	
 	$scope.templateUrl = "./pages/intro.html";
 	
@@ -62,32 +62,32 @@ app.controller('footprintCtrl', function($scope) {
 	$scope.placevisited=[
 	{	location: "Lankawei", 
 	coords:{x: 99.67, y: 6.35}, 
-	images:["./images/lankawi/1.png", "./images/lankawi/2.png", "./images/lankawi/3.png", "./images/lankawi/4.png", "./images/lankawi/5.png"],
+	images:["./images/lankawi/1.jpg", "./images/lankawi/2.jpg", "./images/lankawi/3.jpg", "./images/lankawi/4.jpg", "./images/lankawi/5.jpg"],
 	description: "<p>8 days trip to Lankawei Island in Oct, 2013. Dou Dou was around 5 years old at that time.</p> <p>I clearly remember that DouDou called the shuttle bus with his lovely voice: shuttle please, and several days later even the reception knew him and would like to play with him.</p> <p>We rent a car during this trip, no surprise, a small accident.:-)</p> <p>We also visited K.L for two days. In the twin tower, we even caught a fire drill.</p>"
 	},
 	{	location: "Bali", 
 	coords:{x: 115.22, y: -8.8}, 
-	images:["./images/bali/1.png", "./images/bali/2.png", "./images/bali/3.png", "./images/bali/4.png", "./images/bali/5.png"],
+	images:["./images/bali/1.jpg", "./images/bali/2.jpg", "./images/bali/3.jpg", "./images/bali/4.jpg", "./images/bali/5.jpg"],
 	description: "<p>8 days trip to Bali Island in Apr, 2012. Doudou's first international trip.</p> <p>We really enjoyed the sunshine and breach there. Especially in Nusa Dua, just spent the time on beach and in swimming pool, beautiful leasure time. Doudou was so scared the first time he entered the swimming pool, but later just couldn't stop him.</p> <p>The Fa Lun Gong there was also very impressive - they even have a band. -__-!!</p>"
 	},
 	{	location: "Bashang", 
 	coords:{x: 116, y: 41.58}, 
-	images:["./images/bashang/1.png", "./images/bashang/2.png", "./images/bashang/3.png", "./images/bashang/4.png", "./images/bashang/5.png"],
+	images:["./images/bashang/1.jpg", "./images/bashang/2.jpg", "./images/bashang/3.jpg", "./images/bashang/4.jpg", "./images/bashang/5.jpg"],
 	description: "<p>The trip to prairie in 2013, with high expectation and high dispointment.</p><p>The thing impressed me was not the grass, not the horse, not the broadness land, but the time spent on the way - 7 hours driving from Beijing to there, and 8 hours driving back. I did want to replace the car with a more powerful one - it was so slow after fully loaded..</p>"
 	},
 	{	location: "HongKong", 
 	coords:{x: 114.16, y: 22.3}, 
-	images:["./images/hongkong/1.png", "./images/hongkong/2.png", "./images/hongkong/3.png", "./images/hongkong/4.png", "./images/hongkong/5.png"],
+	images:["./images/hongkong/1.jpg", "./images/hongkong/2.jpg", "./images/hongkong/3.jpg", "./images/hongkong/4.jpg", "./images/hongkong/5.jpg"],
 	description: "<p>4 days trip in Hongkong in 2014.</p> <p>The city is not as good as I imgined. Small and crowded. But the Disney Land was great, even there were so many people. Deeply impressed by the musical opera, the playground was also outstanding. We waited till 8:30PM for the fireworks, but it turned out to be another highlight.</p></p>The Sea World was also attractive, but seemed not to Dou Dou. Diamond cable car was another must-try thing, if you're not scared of the height.<p>"
 	},
 	{	location: "Jiuzaigou", 
 	coords:{x: 104.2, y: 33.3}, 
-	images:["./images/jiuzai/1.png", "./images/jiuzai/2.png", "./images/jiuzai/3.png", "./images/jiuzai/4.png", "./images/jiuzai/5.png"],
+	images:["./images/jiuzai/1.jpg", "./images/jiuzai/2.jpg", "./images/jiuzai/3.jpg", "./images/jiuzai/4.jpg", "./images/jiuzai/5.jpg"],
 	description: "<p>Jiuzaigou trip in year 2006, the first long distance trip after marriage.</p><p>After two days in Chengdu, we took 10 hours bus to Jiu Zai Tou. Pretty dangerious and tough trip, but it deserved - we saw a lot of autumn scenes on the way .</p> <p>End of september is really the best season, the red trees mirrored in the amazing water make it like a heaven.</p><p>In Huanglong, we caught the first snow of that year - from autumn to winter in just one night.</p>"
 	},
 	{	location: "Taishan", 
 	coords:{x: 117.1, y: 37.25}, 
-	images:["./images/taishan/1.png", "./images/taishan/2.png", "./images/taishan/3.png", "./images/taishan/4.png", "./images/taishan/5.png"],
+	images:["./images/taishan/1.jpg", "./images/taishan/2.jpg", "./images/taishan/3.jpg", "./images/taishan/4.jpg", "./images/taishan/5.jpg"],
 	description: "<p>Taishan trip around 2003. A classic place of must be there once, but never the second time.</p> <p>Pretty tired climbing - yes, we'd like to save the money for cable car:-). We didn't see great views on the way, neither caught the sun rise. To people who are not interested in culture very much like us, it was a boring trip.</p>"
 	},
 	];
