@@ -59,7 +59,7 @@
 				
 			</div>
 		</div>
-		<div style="border-radius: 10px/10px;background: #B9D998; height: 295px;">  
+		<div style="border-radius: 10px/10px;background: #B9D998; height: 185px;margin-bottom:10px">  
 			<div style="padding-left: 10px; padding-right: 10px; ">
 				<h3 style="padding-top: 10px;">Recent thoughts</h3>
 				<hr style="margin-top: -5px;" />
@@ -67,7 +67,23 @@
 					The tougher the work is, the quicker the growth will be.
 				</p>
 			</div>
-		</div>	
+		</div>
+		<div style="border-radius: 10px/10px;background: #B9D998; height: 100px; ">  
+			<div style="padding-left: 10px; padding-right: 10px; ">
+				<div class="row">
+					<div class="col-md-8" >
+					<p style="font-size: 180%; padding-top: 5px">{{weather.city}}</p>
+					<hr style="margin-top: -5px;" />
+					<p style="margin-top: -15px; font-size: 110%" >{{weather.weather}}, {{weather.degree}}°C<br>
+					Wind speed: {{weather.windspeed}}m/s</p>
+					</div>	
+					<div class="col-md-4">
+						<img src="{{weather.icon}}" style="width:100px;" />
+					</div>	
+				</div>
+
+			</div>
+		</div>		
 	</div>
 </div>
 

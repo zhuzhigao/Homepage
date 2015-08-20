@@ -22,7 +22,7 @@ app.config(['$routeProvider',
 	}]);
 
 
-app.controller('homeCtrl', function($scope) {
+app.controller('homeCtrl', ['$scope','$http', function($scope, $http) {
 	$scope.imagesource = [
 	{"datathumb": "./images/slides/thumbs/1.jpg", "datasrc": "./images/slides/1.jpg"}, 
 	{"datathumb": "./images/slides/thumbs/2.jpg", "datasrc": "./images/slides/2.jpg"}, 
@@ -32,6 +32,7 @@ app.controller('homeCtrl', function($scope) {
 	{"datathumb": "./images/slides/thumbs/6.jpg", "datasrc": "./images/slides/6.jpg"}		];
 	
 	$scope.templateUrl = "./pages/intro.html";
+	$scope.weather ={city: "Beijing", weather: "", degree: 0, windspeed: 3, icon:""};
 	
 	//this must be called to enable the slider. 
 	//the time delay is necessary to make sure the element is in place. 
@@ -43,8 +44,22 @@ app.controller('homeCtrl', function($scope) {
 				height: '650px',
 			});
 		}, 50);
+	};
+
+	$scope.init = function()
+	{
+		$http.get('http://api.openweathermap.org/data/2.5/find?q=Beijing&units=metric').
+  			then(function(response) {
+  				$scope.weather.weather = response.data.list[0].weather[0].main;
+  				$scope.weather.degree = response.data.list[0].main.temp;
+  				$scope.weather.windspeed = response.data.list[0].wind.speed;
+  				$scope.weather.icon = 'http://openweathermap.org/img/w/' + response.data.list[0].weather[0].icon + '.png';
+  			}, function(response) {
+  				//do nothing if failed to get the weather.
+			});
 	}
-})
+	$scope.init();
+}])
 //this will enable the camSlider, otherwise it won't work with angular
 .directive('camSlider', function($timeout) {
 	return function(scope, el, attrs) {
