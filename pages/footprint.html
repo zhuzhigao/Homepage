@@ -1,9 +1,9 @@
 <div id="baidumap" style="height: 600px; overflow: hidden;margin-bottom:20px;">
 </div>
 
-<div class="row" style="margin-top: -10px; margin-left: 0px; margin-right: 0px">
-	<div class="col-sm-8 col-xs-12 col-md-8" style="padding-right:5; padding-left:0;">
-	<div style="border-radius: 10px/10px;background: #A8DC3C; height: 500px;" > 
+<div class="row row-nomargin">
+	<div class="col-sm-8 col-xs-12 col-md-8 col-minpadding">
+	<div class="roundregion" style="height: 500px;" > 
 		<div class="camera_wrap camera_azure_skin" id="footprintcamera" camslider  style="margin-top:20px;">
 			<div ng-repeat="img in imagesource" data-thumb="{{img.datathumb}}" data-src="{{img.datasrc}}">
 				<div class="camera_caption fadefrombottom">
@@ -13,10 +13,13 @@
 		</div>
 	</div>
 	</div>
-	<div class="col-sm-4 col-xs-6 col-md-4" style="padding-right:0; padding-left:0;">
-		<div style="border-radius: 10px/10px;background: #B9D998; height: 500px;" > 
-			<div style="padding-left: 20px; padding-top:20px; font-size: 200%; font-weight: bold;">{{activePlace.location}}</div>
-			<div style="padding-left: 20px; padding-right: 20px" ng-bind-html="activePlace.description">
+	<div class="col-sm-4 col-xs-6 col-md-4 col-nopadding">
+		<div class="roundregion" style="height: 500px;"> 
+			<div class="content-mediumpadding">
+				<h3 class="h3-padding" style="margin-top: 0px">{{activePlace.location}}</h3>
+				<hr class="hr-margin"/>
+				<div ng-bind-html="activePlace.description">
+				</div>
 			</div>
 		</div>
 	</div>

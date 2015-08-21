@@ -2,12 +2,12 @@
 <div class="row" style="position:relative; margin: 0 auto;">
 	<img src="../images/topbanner.jpg" style="width: 1200px;"></img>
 </div> 
-<div class="row" style="margin-top: -10px; margin-left: 0px; margin-right: 0px">
-	<div class="col-sm-8 col-xs-12 col-md-8" style="padding-right:5; padding-left:0;" >
-		<div style="border-radius: 10px/10px;background: #B9D998; height: 600px; " > 
-			<div style="padding-left: 10px; padding-right: 10px; ">
-				<h3 style="padding-top: 10px;">Welcome</h3>
-				<hr style="margin-top: -5px;" />
+<div class="row row-nomargin">
+	<div class="col-sm-8 col-xs-12 col-md-8 col-minpadding" >
+		<div class="roundregion" style="height: 600px; " > 
+			<div class="content-mediumpadding">
+				<h3 class="h3-padding">Welcome</h3>
+				<hr class="hr-margin" />
 				<p>
 					Welcome to Zhigao's family home page!
 				</p>
@@ -23,9 +23,9 @@
 				</p>
 			</div>	
 
-			<div style="padding-left: 10px; padding-right: 10px; ">
-				<h3 style="padding-top: 10px;">What's in the site?</h3>
-				<hr style="margin-top: -5px;" />
+			<div class="content-mediumpadding">
+				<h3 class="h3-padding">What's in the site?</h3>
+				<hr class="hr-margin" />
 				<p>
 					You'll find different things in different pages, and we expect you're interested in some of them.
 				</p>
@@ -46,11 +46,11 @@
 
 		</div>
 	</div>
-	<div class="col-sm-4 col-xs-6 col-md-4" style="padding-right:0; padding-left:0;" >
-		<div style="border-radius: 10px/10px;background: #B9D998; height: 295px; margin-bottom:-10px" > 
-			<div style="padding-left: 10px; padding-right: 10px; ">
-				<h3 style="padding-top: 10px;">Coming event</h3>
-				<hr style="margin-top: -5px;" />
+	<div class="col-sm-4 col-xs-6 col-md-4 col-nopadding" >
+		<div class="roundregion" style="height: 295px; margin-bottom:-10px" > 
+			<div class="content-mediumpadding">
+				<h3 class="h3-padding">Coming event</h3>
+				<hr class="hr-margin" />
 				<p>
 					Tour to Changbai Moutain! We've kept talking about it for years, and finally have the tickets booked.
 				</p>
@@ -59,23 +59,23 @@
 				
 			</div>
 		</div>
-		<div style="border-radius: 10px/10px;background: #B9D998; height: 185px;margin-bottom:10px">  
-			<div style="padding-left: 10px; padding-right: 10px; ">
-				<h3 style="padding-top: 10px;">Recent thoughts</h3>
-				<hr style="margin-top: -5px;" />
+		<div class="roundregion" style="height: 185px;">  
+			<div class="content-mediumpadding">
+				<h3 class="h3-padding">Recent thoughts</h3>
+				<hr class="hr-margin" />
 				<p>
 					The tougher the work is, the quicker the growth will be.
 				</p>
 			</div>
 		</div>
-		<div style="border-radius: 10px/10px;background: #B9D998; height: 100px; ">  
-			<div style="padding-left: 10px; padding-right: 10px; ">
-				<div class="row">
-					<div class="col-sm-8 col-xs-12 col-md-8" >
-					<p style="font-size: 180%; padding-top: 5px">{{weather.city}}</p>
-					<hr style="margin-top: -5px;" />
-					<p style="margin-top: -15px; font-size: 110%" >{{weather.weather}}, {{weather.degree}}°C<br>
-					Wind speed: {{weather.windspeed}}m/s</p>
+		<div class="roundregion" style="height: 100px;">  
+			<div class="content-mediumpadding">
+				<div class="row row-nomargin" style="margin-top:10px">
+					<div class="col-sm-8 col-xs-12 col-md-8 col-minpadding" >
+						<p style="padding-top: 5px; font-size: 180%">{{weather.city}}</p>
+						<hr class="hr-margin" />
+						<p style="margin-top: -15px; font-size: 110%" >{{weather.weather}}, {{weather.degree}}°C<br>
+						Wind speed: {{weather.windspeed}}m/s</p>
 					</div>	
 					<div class="col-sm-4 col-xs-6 col-md-4">
 						<img src="{{weather.icon}}" style="width:100px;" />
@@ -87,7 +87,7 @@
 	</div>
 </div>
 
-<div style="border-radius: 10px/10px;background: #A8DC3C; height: 700px; margin-top: 10px" > 
+<div class="roundregion" style="height: 700px; margin-top: 10px" > 
 	<div class="camera_wrap camera_azure_skin" id="camera_wrap_1" camslider style="padding-top: 20px;">
 		<div ng-repeat="img in imagesource" data-thumb="{{img.datathumb}}" data-src="{{img.datasrc}}">
 			<div class="camera_caption fadefrombottom">

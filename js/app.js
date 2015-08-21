@@ -114,7 +114,7 @@ app.controller('footprintCtrl', function($scope) {
 	$scope.onsliderload = function() {
 		setTimeout(function(){
 			var map = new BMap.Map("baidumap");  
-			map.centerAndZoom(new BMap.Point(8, 20), 3);
+			map.centerAndZoom(new BMap.Point(0, 20), 3);
 			map.addControl(new BMap.MapTypeControl());
 			map.setCurrentCity("北京");          
 			map.enableScrollWheelZoom(true);

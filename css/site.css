@@ -1,0 +1,27 @@
+.roundregion{
+	border-radius: 10px;
+	background-color: #B9D998;
+}
+.col-nopadding{
+	padding-right:0; 
+	padding-left:0;
+}
+.col-minpadding{
+	padding-right:5px; 
+	padding-left:0px;
+}
+.row-nomargin{
+	margin-top: -10px; 
+	margin-left: 0px; 
+	margin-right: 0px;
+}
+.content-mediumpadding{
+	padding-left: 10px; 
+	padding-right: 10px;
+}
+.h3-padding{
+	padding-top: 10px;
+}
+.hr-margin{
+	margin-top: -5px;
+}
